@@ -1,0 +1,13 @@
+testImage = imread('Images\chicken\IMG_8561.HEIC.jpeg');
+%imshow(testImage);
+
+testingImageVector = double(I(:));
+
+teoutput = net(testingImageVector);
+[confidence, predictedClass] = max(output);
+
+disp('Output Values:');
+disp(output);
+
+disp(['Predicted Class: ' num2str(predictedClass)]);
+disp(['Confidence: ' num2str(confidence)]);
